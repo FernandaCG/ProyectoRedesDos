@@ -30,7 +30,6 @@ public class ServletArchivo extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             try {
                 File file = new File("/home/fernanda/Documentos/Redes2/5.jpg");
                 //Direccion IP del servidor.
