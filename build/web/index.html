@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+@author fernanda
 -->
 <html>
     <head>
@@ -12,8 +10,8 @@ and open the template in the editor.
     </head>
     <body>
         <div>Cargar archivo</div>
-        <form action="ServletArchivo" method="get">
-            <input type="file" name="img">
+        <form action="ServletArchivo" enctype="multipart/form-data" method="POST" >
+            <input type="file" name="img" >
             <input type="submit" value="Analizar">
         </form>
     </body>
