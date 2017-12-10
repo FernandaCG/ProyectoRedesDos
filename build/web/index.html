@@ -10,8 +10,9 @@
     </head>
     <body>
         <div>Cargar archivo</div>
-        <form action="ServletArchivo" enctype="multipart/form-data" method="POST" >
-            <input type="file" name="img" >
+        <form action="ServletArchivo" method="POST" >
+            <input type="file" name="img">
+            <input type="text" name="algo">
             <input type="submit" value="Analizar">
         </form>
     </body>

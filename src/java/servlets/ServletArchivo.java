@@ -28,13 +28,13 @@ public class ServletArchivo extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        PrintWriter out = response.getWriter();
+        String name = request.getParameter("img");
             try {
-                Part filePart = request.getPart("img"); // Retrieves <input type="file" name="file">
-                String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
-                InputStream fileContent = filePart.getInputStream();
-                System.out.println("FileName:" +request.getContextPath()+ fileName);
-                File file = new File("/home/fernanda/Documentos/Redes2/5.jpg");
+                
+               // String name = "5.jpg";
+                
+                File file = new File("/home/fernanda/Documentos/Redes2/proyecto/img/"+name);
                 try (
                         //Direccion IP del servidor.
                         Socket soc = new Socket("192.168.1.81", 2004)) {
@@ -50,7 +50,6 @@ public class ServletArchivo extends HttpServlet {
             } catch (IOException e) {
             }
 
-        }
     }
 
 }
