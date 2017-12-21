@@ -7,13 +7,22 @@
         <title>Bienvenido</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div>Cargar archivo</div>
-        <form action="ServletArchivo" method="POST" >
-            <input type="file" name="img">
-            <input type="text" name="algo">
-            <input type="submit" value="Analizar">
-        </form>
+        <div class="jumbotron text-center">
+            <h1>APLICACIONES PARA COMUNICACIONES DE RED</h1> 
+        </div>
+        <div class="container">
+            <div class="form-group">
+                <div>Cargar archivo</div>
+                <form action="ServletArchivo" method="POST" >
+                    <br>
+                    Selecciona la imagen que deseas: <input type="file" name="img">
+                    <br><br> <input type="submit" value="Analizar" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
     </body>
 </html>
